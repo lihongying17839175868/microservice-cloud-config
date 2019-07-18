@@ -1,0 +1,16 @@
+spring:
+  profiles:
+     active: dev  #激发开发环境配置
+server:
+  port: 4001
+spring:
+  profiles；dev   #生产环境
+  application:
+    name: microservice-config-dev
+server:
+  port: 4002
+spring:
+  profiles:prod
+  application:
+    name: microservice-config-prod
+#选utf-8保存
