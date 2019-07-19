@@ -1,7 +1,7 @@
  spring:
    profiles:
       active: dev
-
+---
  server:
    port: 4001
 
@@ -9,7 +9,7 @@
    profiles: dev
    application:
      name: microservice-config-dev
-
+---
  server:
    port: 4002
 
