@@ -4,7 +4,7 @@ spring:
 server:
   port: 4001
 spring:
-  profiles；dev   #生产环境
+  profiles: dev   #生产环境
   application:
     name: microservice-config-dev
 server:
