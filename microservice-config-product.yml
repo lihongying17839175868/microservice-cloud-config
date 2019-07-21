@@ -5,7 +5,7 @@ sring:
 server:
   port: 8001
 mabatis:
-      config-location: classpath:com/mengxuegu/springcloud/mapper/mybatis.cfg,xml
+      config-location: classpath:com/mengxuegu/springcloud/mapper/mybatis.cfg.xml
       type-aliases-package: com.mengxuegu.springcloud.entities
 spring:
   profiles: dev #开发环境
