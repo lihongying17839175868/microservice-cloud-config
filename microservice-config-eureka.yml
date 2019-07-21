@@ -4,6 +4,7 @@ spring:
 ---
 server:
   port: 6001 #端口号
+  
 spring:
   profiles: dev #开发环境
   application:
@@ -21,10 +22,11 @@ eureka:
 ---
 server:
   port: 6001
-    spring:
-      profiles: prod  #生产环境
-      application:
-        name: microservice-config-eureka
+  
+spring:
+  profiles: prod  #生产环境
+  application:
+    name: microservice-config-eureka
 
 eureka:
   instance:
