@@ -14,11 +14,11 @@ eureka:
     hostname: eureka6001.com
   client:
     registerWithEureka: false
-    fetchRegister: false
     serviceUrl:
       defaultZone: http://eureka6001.com:6001/eureka/
+    fetch-registry: false
   server:
-    enable-self-perservation: false
+    enable-self-preservation: false
 ---
 server:
   port: 6001
