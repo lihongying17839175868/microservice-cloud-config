@@ -1,12 +1,12 @@
-sring:
+spring:
   profiles:
     active: dev #激发开发环境配置
 ---
 server:
   port: 8001
-mabatis:
-      config-location: classpath:com/mengxuegu/springcloud/mapper/mybatis.cfg.xml
-      type-aliases-package: com.mengxuegu.springcloud.entities
+mybatis:
+  config-location: classpath:com/mengxuegu/springcloud/mapper/mybatis.cfg.xml
+  type-aliases-package: com.mengxuegu.springcloud.entities
 spring:
   profiles: dev #开发环境
   application:
@@ -28,9 +28,9 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://eureka6001.com:6001/eureka
-instance:
-  instanceId: ${spring.application.name}:${server.port}
-  prefer-ip-address: true
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
 ---
 server:
   port: 8001
@@ -38,25 +38,23 @@ mybatis:
   config-location: classpath:com/mengxuegu/springcloud/mapper/mybatis.cfg.xml
   type-aliases-package: com.mengxuegu.springcloud.entities # 所有Entity别名类所在包
 #  mapper-locations: classpath:mapper/mapper/**/*.xml     # mapper映射文件
+
 spring:
   profiles: prod  #生产环境
   application:
     name: microservice-product-config
-datasource:
-  type: com.alibaba.druid.pool.DruidDataSource
-  driver-class-name: com.mysql.jdbc.Driver # mysql驱动包
-  url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8
-  username: root
-  password: root
-  dbcp2:
-  min-idle: 5
-  initial-size: 5
-  max-total: 5
-  max-wait-millis: 150
-spring:
-  application:
-    name: microservice-product
 
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver # mysql驱动包
+    url: jdbc:mysql://127.0.0.1:3306/springcloud_db02?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 150
+    type: com.alibaba.druid.pool.DruidDataSource
 
 eureka:
   client:
